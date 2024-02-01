@@ -22,3 +22,29 @@ int main()
     }
     
 }
+//palindrome in function:
+#include <bits/stdc++.h>
+using namespace std;
+int palindrome(int n)
+{
+    int temp=n;
+    int rev=0;
+    while(temp!=0){
+        int r=temp%10;
+        rev=rev*10+r;
+        temp=temp/10;
+    }
+    return rev;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    if(palindrome(n)){
+    	cout<<"yes";
+	}
+	else{
+		cout<<"no";
+	}
+    
+}
